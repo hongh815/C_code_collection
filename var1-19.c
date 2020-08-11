@@ -10,9 +10,14 @@ int main(void)
     scanf("%d %d",&dis, &spd);
     
     double t = (double)dis / spd;
-    int time = t * 360;
-    
-    printf("소요 시간은  %d 시간, %d 분, %d 초 입니다.",time/360, (time%360)/60,((time%360)%60)/1);
-    
+		int tint = dis / spd;
+		
+    double min = (double)(t-tint)*60;
+		int minint = (t-tint)*60;
+
+		double sec = (double)(min-minint)*60;		
+   
+		printf("소요 시간은  %d 시간, %d 분, %.3lf 초 입니다.", tint, minint, sec);
+
 }
 
