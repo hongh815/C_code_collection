@@ -14,28 +14,26 @@ class Printer {
 	string str; 
 	public :
 		Printer() {};
-		void setStr(string& sentence) {
-			str = sentence;
+		void SetString(const string& sentence) {
+			this->str = sentence;
 		}
-		void SetString(getline(cin, str));
 		void ShowString();	
 };
 
-void Printer::SetString() {
-
-}
 void Printer::ShowString() {
-
+	cout << str << endl;
 }
 
 int main(void) {
 
-	Printer pnt; 
+	Printer pnt;
 
-	pnt.SetString(“Hello world”); 
+	pnt.SetString("Hello world!");
 	pnt.ShowString();
-	pnt.SetString(“I love C++”); 
+
+	pnt.SetString("I love C++");
 	pnt.ShowString();
+
 	
 	return 0;
 }
