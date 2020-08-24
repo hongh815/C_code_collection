@@ -39,6 +39,8 @@ int main() {
 	cin >> cArr;
 	cout << cArr << endl;
 
+	cin.ignore(); // 위에 혹시나 남아있을 쓰레기 값들을 지워주는 곳.
+
 	// getline 을 사용해 보는 부분
 
 	string name;
