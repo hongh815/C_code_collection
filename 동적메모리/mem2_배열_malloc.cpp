@@ -49,6 +49,8 @@ int main(void) {
 	*(pary+1) = 2;
 	*(pary+2) = 3;
 	*(pary+3) = 4;
+
+	printf("%d", sizeof(pary));
 	free(pary);
 
 }
