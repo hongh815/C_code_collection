@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+double sqrtn(double a);
+/*
+int main(void)
+{
+	printf("--> %lf..\n", sqrtn(8));
+}
+*/
+
+double 
+sqrtn(double num)
+{
+	double next, temp;	
+	next = 0.5 * (1 + (num / 1));
+	
+	while(1)
+	{
+		temp = next;
+		next = 0.5 * (next + (num / next));
+		
+		if((temp - next) < 0.005 || (temp - next) < -0.005) break;
+	}	
+	return next;
+}
