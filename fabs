@@ -1,0 +1,21 @@
+/*
+ * fabsn.c - Returns the absolute value of cal_x
+ * 
+ *
+ *
+*/
+#include <NEOS178STypes.h>
+
+double 
+fabsn(double cal_x) 
+{
+	static double result = 0;
+	if(cal_x > 0)
+	{
+		result = cal_x;
+	} else
+	{
+		result = (-cal_x);
+	}
+	return result;
+}
