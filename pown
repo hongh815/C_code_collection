@@ -1,0 +1,26 @@
+// pow function
+#include <stdio.h>																																																																								pow(int a, int n);
+/*
+int main(void)
+{
+	printf("--> %d ..\n", pown(2, 5));
+	
+	return 0;
+}
+*/
+int pown(int a, int n)
+{
+	if(n == 0)
+	return 1;
+	
+	int re = pow(a, n / 2);
+	int temp = re * re;
+	
+	if(n % 2 == 0)
+	{
+		return temp;
+	 } else
+	 {
+	 	return a * temp;
+	 }
+}
